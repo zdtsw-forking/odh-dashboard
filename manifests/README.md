@@ -1,18 +1,16 @@
-# Dashboard
+# Manifests
 
-The Open Data Hub Dashboard component installs a UI which 
+They run on Kustomize. There are 3 types of deployments.
 
-- Shows what's installed
-- Show's what's available for installation
-- Links to component UIs
-- Links to component documentation
+- Open Data Hub (`./odh`)
+- Red Hat OpenShift AI (`./rhoai`)
+  - RHOAI Managed (`./rhoai/addon`)
+  - RHOAI Self Managed (`./rhoai/onprem`)
 
-For more information, visit the project [GitHub repo](https://github.com/opendatahub-io/odh-dashboard).
+The `common` & `./rhoai/shared` are two locations where the bases are found. Base folder has the resources or overrides (for RHOAI) to deploy the dashboard. 
 
-### Folders
-1. base: contains all the necessary yaml files to install the dashboard
+## Installation
 
-##### Installation
 Use the `kustomize` tool to process the manifest for the `oc apply` command.
 
 ```

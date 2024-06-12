@@ -4,7 +4,8 @@ commonLabels:
   app: odh-dashboard
   app.kubernetes.io/part-of: odh-dashboard
 resources:
-  - ../base
-  - ./nvidia
-  - ./rhoam
-  - ./starburst
+  - ../../common
+  - ./apps
+  - ./base
+  - ./consolelink
+  - ./odhdashboardconfig
